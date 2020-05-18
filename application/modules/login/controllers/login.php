@@ -1,10 +1,4 @@
 <?php 
-/*************************************************
-Created By: Waseem Khan
-Dated: 18-08-2015
-version: 1.0
-*************************************************/
-
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Login extends MX_Controller
 {
@@ -205,17 +199,9 @@ function success(){
 }
 
 function logout(){
-	//session_destroy();
-//session_write_close();
-	//$outlet_data = $this->session->userdata('outlet_data');
-	//print '<br> session data ===>>';print_r($outlet_data);
-
 	$this->session->unset_userdata('user_data');
 	$this->session->unset_userdata('outlet_data');
-	//$outlet_data = $this->session->userdata('outlet_data');
-	//print '<br> session data ===>>';print_r($outlet_data);
-	//exit;
-	$this->index();
+	redirect(ADMIN_BASE_URL);
 	
 }
 

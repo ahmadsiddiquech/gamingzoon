@@ -1,6 +1,4 @@
 
-    <!-- Header End -->
-
     <!-- Hero Section Begin -->
     <section class="hero-section">
         <div class="container">
@@ -18,7 +16,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-5 col-md-6 offset-lg-1 offset-xl-4">
+                <div class="col-xl-4 col-lg-5 col-md-6 offset-lg-1 offset-xl-2">
                     <div class="trending-post">
                         <div class="section-title">
                             <h5>Treding Games</h5>
@@ -208,26 +206,29 @@
                 </div>
                 <div class="col-lg-4 col-md-7">
                     <div class="sidebar-option">
+                        <?php $gamers_data = $this->session->userdata('gamers_data');
+                        if (empty($gamers_data)) { ?>
                         <div class="subscribe-option">
                             <div class="section-title">
                                 <h5>One Click Register</h5>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor.</p>
-                            <form action="#">
-                                <select>
+                            <form action="<?=BASE_URL?>front/register" method="POST">
+                                <select name="country">
                                     <option value="pakistan">Pakistan</option>
                                     <option value="china">China</option>
                                     <option value="india">India</option>
                                 </select>
-                                <select>
+                                <select name="currency">
                                     <option value="pkr">PKR (Pakistani Rupee)</option>
                                     <option value="pkr">Yuan (Chinese Yuan)</option>
                                     <option value="pkr">INR (Indian Rupee)</option>
                                 </select>
-                                <input type="text" placeholder="Promo Code">
+                                <input type="text" placeholder="Promo Code" name="promo_code">
                                 <button type="submit"><span>Register</span></button>
                             </form>
                         </div>
+                        <?php } ?>
                         <div class="best-of-post pt-5">
                             <div class="section-title">
                                 <h5>Best of</h5>
@@ -436,5 +437,3 @@
             </div>
         </div>
     </section>
-    <!-- Latest Preview Section End -->
-    

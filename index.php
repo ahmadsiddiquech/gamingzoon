@@ -19,10 +19,10 @@
  */
  
 // ************** FOR LOCAL SERVER
-	// define('ENVIRONMENT', 'development');
+	define('ENVIRONMENT', 'development');
 
 // ************** FOR LIVE SERVER
-	define('ENVIRONMENT', 'production');
+	// define('ENVIRONMENT', 'production');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING

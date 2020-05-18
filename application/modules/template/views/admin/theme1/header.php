@@ -5,8 +5,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
    <meta name="description" content="Bootstrap Admin App + jQuery">
    <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
-   <title>POS Xpert</title>
-   <link rel="icon" type="image/png" href="<?php echo STATIC_ADMIN_IMAGE ?>favicon.ico">
+   <title>Admin - Gaming Zoon</title>
+   <link rel="icon" type="image/png" href="<?php echo STATIC_ADMIN_IMAGE ?>logo.png">
    
    <!-- JQUERY-->
    <script src="<?php echo STATIC_ADMIN_JS?>jquery.js"></script>
@@ -54,9 +54,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
 </head>
 <body>
-   <?php
-      $data = $this->session->userdata('user_data');
-   ?>
 <div class="wrapper">
       <!-- top navbar-->
       <header class="topnavbar-wrapper">
@@ -66,12 +63,12 @@
             <div class="navbar-header">
                <a href="#/" class="navbar-brand">
                   <div class="brand-logo">
-                     <h3 style="color: white;margin: 0;padding:10px">POS Xpert</h3>
-                      <!-- <img src="<?php echo STATIC_ADMIN_IMAGE?>logo-full.png" style="width: 85%;" alt="App Logo" class="img-responsive"> -->
+                     
+                      <img src="<?php echo STATIC_ADMIN_IMAGE?>logo-full.png" style="width: 85%;" alt="App Logo" class="img-responsive">
                   </div>
                   <div class="brand-logo-collapsed">
-                     <!-- <img src="<?php echo STATIC_ADMIN_IMAGE?>logo.png" style="width: 80%;padding-top: 5px;" alt="App Logo" class="img-responsive"> --> 
-                     <h3 style="color: white;margin: 0;padding:10px">POS</h3>
+                     <img src="<?php echo STATIC_ADMIN_IMAGE?>logo.png" style="width: 80%;padding-top: 5px;" alt="App Logo" class="img-responsive"> 
+                     
                   </div>
                </a>
             </div>
@@ -85,35 +82,10 @@
                         <em class="fa fa-navicon"></em>
                      </a>
                   </li>
-                  <li style="padding: 13px;font-size: larger; color:#fff"><?=ucwords($data['user_name']);?> </li>
-                  <?php if ($data['role'] =='portal admin') { ?>
-                  <li style="padding: 7px 0px 0px 110px;font-size: larger;">
-                          <?php
-                          $options = array('' => '')+$outlet_title ;
-                          $attribute = array('class' => 'control-label col-md-4','style' => 'min-width:250px;');
-                          echo form_label('', 'outlet_id', $attribute);?>
-                          <div class="col-md-8"><?php echo form_dropdown('outlet_id', $options,$data['outlet_id'], 'class="form-control chosen" required id="outlet_id" tabindex ="3"'); ?>
-                          </div>
-                  </li>
-               <?php } ?>
+                  
                </ul>
                <ul class="nav navbar-nav navbar-right">
                   <li><a class="admin-logout" href="<?php echo ADMIN_BASE_URL?>login/logout" title="Lock screen"><em class="icon-lock"> </em> Logout</a></li>
                </ul>
             </div>
       </header>
-<script type="text/javascript">
-   $("#outlet_id").change(function () {
-        var outlet_id = this.value;
-       $.ajax({
-            type: 'POST',
-            url: "<?php echo ADMIN_BASE_URL?>template/change_outlet_id",
-            data: {'id': outlet_id },
-            async: false,
-            success: function(result) {
-               location.reload();
-          }
-        });
-  });
-   $(".chosen").chosen();
-</script>

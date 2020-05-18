@@ -79,13 +79,6 @@
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed by <a href="https://www.facebook.com/ahmadsiddiquech" target="_blank">Ahmad Siddique</a>
 </p></div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="ca-links">
-                            <a href="<?=BASE_URL?>aboutus">About</a>
-                            <a href="<?=BASE_URL?>contactus">Contact</a>
-                            <a href="https://join.skype.com/invite/bzGvVHb9cZBL" target="_blank" ><span class="fa fa-skype"></span>&nbsp;Support</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -103,26 +96,26 @@
                         <h2>One Click</h2>
                         <p>Fill out the form below to recieve a free and confidential</p>
                     </div>
-                    <form action="#" class="signup-form">
+                    <form action="<?=BASE_URL?>front/register" method="POST" class="signup-form">
                         <div class="sf-input-list">
-                            <select>
+                            <select name="country">
                                     <option value="pakistan">Pakistan</option>
                                     <option value="china">China</option>
                                     <option value="india">India</option>
-                                </select>
-                                <select>
-                                    <option value="pkr">PKR (Pakistani Rupee)</option>
-                                    <option value="pkr">Yuan (Chinese Yuan)</option>
-                                    <option value="pkr">INR (Indian Rupee)</option>
-                                </select>
-                                <input type="text" placeholder="Promo Code">
+                            </select>
+                            <select name="currency">
+                                <option value="pkr">PKR (Pakistani Rupee)</option>
+                                <option value="pkr">Yuan (Chinese Yuan)</option>
+                                <option value="pkr">INR (Indian Rupee)</option>
+                            </select>
+                            <input type="text" placeholder="Promo Code" name="promo_code">
                         </div>
-                        <div class="radio-check">
+                        <!-- <div class="radio-check">
                             <label for="rc-agree">I agree with the term & conditions
                                 <input type="checkbox" id="rc-agree">
                                 <span class="checkbox"></span>
                             </label>
-                        </div>
+                        </div> -->
                         <button type="submit"><span>REGISTER NOW</span></button>
                     </form>
                 </div>
@@ -135,10 +128,10 @@
                         <h2>Login</h2>
                         <p>Fill out the form below to recieve a free and confidential</p>
                     </div>
-                    <form action="#" class="signup-form">
+                    <form action="<?=BASE_URL?>front/login" method="POST" class="signup-form">
                         <div class="sf-input-list">
-                            <input type="text" placeholder="Id">
-                            <input type="text" placeholder="Password">
+                            <input type="text" placeholder="Login ID" name="login_id">
+                            <input type="password" placeholder="Password" name="password">
                         </div>
                         <button type="submit"><span>Login</span></button>
                     </form>
@@ -159,6 +152,7 @@
         </div>
     </div>
     <!-- Search model end -->
+
 
     <!-- Js Plugins -->
     <script src="<?=STATIC_FRONT_JS?>jquery-3.3.1.min.js"></script>

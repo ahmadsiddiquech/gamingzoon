@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gaming Zoon</title>
-
+    <link rel="icon" type="image/png" href="<?php echo STATIC_ADMIN_IMAGE ?>logo.png">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
@@ -66,21 +66,25 @@
                     <div class="col-lg-6 col-md-8">
                         <div class="ht-widget">
                             <ul>
-                            	<?php date_default_timezone_set("Asia/Karachi"); ?>
+                            	<?php date_default_timezone_set("Asia/Karachi"); 
+                                $gamers_data = $this->session->userdata('gamers_data');
+                                ?>
                                 <li><i class="fa fa-clock-o"></i><?= date('h:i')?></li>
                                 <li><i class="fa fa-calendar-o"></i><?= date('d,M-Y')?></li>
-                                <li class="signup-switch signup-open"><i class="fa fa-sign-out"></i> Login / Sign up
+                                <?php if (isset($gamers_data) && !empty($gamers_data)) { ?>
+                                    <li><a href="<?=BASE_URL?>account" style="color: white"><span class="fa fa-user"></span>&nbsp;My Account</a></li>
+                                <?php } else { ?>
+                                <li class="signup-switch signup-open"><i class="fa fa-sign-out"></i> Login / Regitser
                                 </li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-4">
                         <div class="ht-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-envelope-o"></i></a>
+                            <a href="#" target="_blank" ><span class="fa fa-cog"></span>&nbsp;Settings</a>
+                            <a href="#" target="_blank" ><span class="fa fa-mobile"></span>&nbsp;Get App</a>
+                            <a href="https://join.skype.com/invite/bzGvVHb9cZBL" target="_blank" ><span class="fa fa-skype"></span>&nbsp;Support</a>
                         </div>
                     </div>
                 </div>
@@ -195,7 +199,7 @@
                         </li> -->
                         <li class="<? if($controller=='upcomingevents') echo("active")?>"><a href="<?=BASE_URL?>upcomingevents"><span>Upcoming Events</span></a></li>
                         <li class="<? if($controller=='aboutus') echo("active")?>"><a href="<?=BASE_URL?>aboutus"><span>About Us</span></a></li>
-                        <li class="<? if($controller=='contactus') echo("active")?>"><a href="<?=BASE_URL?>contactus"><span>Contact Us</span></acontactusli>
+                        <li class="<? if($controller=='contactus') echo("active")?>"><a href="<?=BASE_URL?>contactus"><span>Contact Us</span></a></li>
                     </ul>
                 </div>
             </div>

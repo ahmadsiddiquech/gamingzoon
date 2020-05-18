@@ -1,6 +1,6 @@
     <!-- Page footer-->
 
-    <footer><span>&copy; <script>document.write(new Date().getFullYear())</script> - POS Xpert</span></footer>
+    <footer><span>&copy; <script>document.write(new Date().getFullYear())</script> - <a href="https://www.facebook.com/ahmadsiddiquech" target="_blank">Ahmad Siddique</a></span></footer>
 
     </div><!-- wrapper div ends here -->
 
