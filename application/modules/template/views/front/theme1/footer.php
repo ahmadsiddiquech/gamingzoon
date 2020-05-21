@@ -152,7 +152,42 @@
         </div>
     </div>
     <!-- Search model end -->
-
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #9e0303;">
+                    <h4 class="modal-title" id="myModalLabel">Thanks For Registration</h4>
+                </div>
+                <div class="modal-body" style="background-color: #a81d1d; color: white">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>Login Id : </label>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" id="username" value="<?=$this->session->flashdata('username');?>" readonly></input>
+                        </div>
+                        <div class="col-lg-2">
+                            <button class="fa fa-copy btn btn-success" onclick="copyUser()"></button>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-md-3">
+                            <label>Password : </label>
+                        </div>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" id="password" value="<?=$this->session->flashdata('password');?>" readonly></input>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="fa fa-copy btn btn-success" onclick="copyPass()"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="background-color: #9e0303;">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Js Plugins -->
     <script src="<?=STATIC_FRONT_JS?>jquery-3.3.1.min.js"></script>
@@ -163,6 +198,26 @@
     <script src="<?=STATIC_FRONT_JS?>jquery.slicknav.js"></script>
     <script src="<?=STATIC_FRONT_JS?>owl.carousel.min.js"></script>
     <script src="<?=STATIC_FRONT_JS?>main.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        <?php if($this->session->flashdata('username')){?>
+            $('#myModal').modal('show');
+        <?php }?>
+    });
+
+    function copyPass() {
+      var copyText = document.getElementById("password");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+    }
+    function copyUser() {
+      var copyText = document.getElementById("username");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+    }
+    </script>
 </body>
 
 </html>

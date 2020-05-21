@@ -48,19 +48,19 @@ if($_SERVER['HTTP_HOST'] == 'ahmad-pc' || $_SERVER['HTTP_HOST'] == 'localhost' |
 }
 else{
 	// ************** FOR LIVE SERVER
-	define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/gamingzoon/');
-	define('HTTPS_BASE_URL', 'https://'.$_SERVER['HTTP_HOST'].'/gamingzoon/');
-	define('BASE_URL_NEWS_LISTING', 'http://'.$_SERVER['HTTP_HOST'].'/gamingzoon/front/');
-	define('FOOTER_BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/gamingzoon/template/');
-	define('CAPTCHA_BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/gamingzoon/captcha/');
-	define('IMAGE_BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/gamingzoon/uploads/');
-	define('ADMIN_BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/gamingzoon/admin/');
-	define('STATIC_ADMIN_CSS', 'http://'.$_SERVER['HTTP_HOST'].'/gamingzoon/static/admin/theme1/css/');
-	define('STATIC_ADMIN_JS', 'http://'.$_SERVER['HTTP_HOST'].'/gamingzoon/static/admin/theme1/js/');
-	define('STATIC_ADMIN_IMAGE', 'http://'.$_SERVER['HTTP_HOST'].'/gamingzoon/static/admin/theme1/images/');
-	define('STATIC_FRONT_CSS', 'http://'.$_SERVER['HTTP_HOST'].'/gamingzoon/static/front/gamingzoon/css/');
-	define('STATIC_FRONT_JS', 'http://'.$_SERVER['HTTP_HOST'].'/gamingzoon/static/front/gamingzoon/js/');
-	define('STATIC_FRONT_IMAGE', 'http://'.$_SERVER['HTTP_HOST'].'/gamingzoon/static/front/gamingzoon/images/');
+	define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/');
+	define('HTTPS_BASE_URL', 'https://'.$_SERVER['HTTP_HOST'].'/');
+	define('BASE_URL_NEWS_LISTING', 'http://'.$_SERVER['HTTP_HOST'].'/');
+	define('FOOTER_BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/template/');
+	define('CAPTCHA_BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/captcha/');
+	define('IMAGE_BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/uploads/');
+	define('ADMIN_BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/admin/');
+	define('STATIC_ADMIN_CSS', 'http://'.$_SERVER['HTTP_HOST'].'/static/admin/theme1/css/');
+	define('STATIC_ADMIN_JS', 'http://'.$_SERVER['HTTP_HOST'].'/static/admin/theme1/js/');
+	define('STATIC_ADMIN_IMAGE', 'http://'.$_SERVER['HTTP_HOST'].'/static/admin/theme1/images/');
+	define('STATIC_FRONT_CSS', 'http://'.$_SERVER['HTTP_HOST'].'/static/front/gamingzoon/css/');
+	define('STATIC_FRONT_JS', 'http://'.$_SERVER['HTTP_HOST'].'/static/front/gamingzoon/js/');
+	define('STATIC_FRONT_IMAGE', 'http://'.$_SERVER['HTTP_HOST'].'/static/front/gamingzoon/images/');
 
 	// define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/');
 	// define('HTTPS_BASE_URL', 'https://'.$_SERVER['HTTP_HOST'].'/');

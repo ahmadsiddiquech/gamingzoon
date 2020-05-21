@@ -30,6 +30,7 @@ class Account extends MX_Controller {
         $this->template->front($data);
     }
 
+
     function update(){
         $data['password'] = $this->input->post('password');
         $data['join_date'] = $this->input->post('join_date');
@@ -45,6 +46,33 @@ class Account extends MX_Controller {
         $id = $gamers_data['user_id'];
         $this->_update($data,$id);
         redirect(BASE_URL.'account/profile');
+    }
+
+    function settings() {
+        $data['view_file'] = 'settings';
+        $data['module'] = 'account';
+        $data['header_file'] = 'header';
+        $data['footer_file'] = 'footer';
+        $this->load->module('template');
+        $this->template->front($data);
+    }
+
+    function withdraw() {
+        $data['view_file'] = 'withdraw';
+        $data['module'] = 'account';
+        $data['header_file'] = 'header';
+        $data['footer_file'] = 'footer';
+        $this->load->module('template');
+        $this->template->front($data);
+    }
+
+    function deposit() {
+        $data['view_file'] = 'deposit';
+        $data['module'] = 'account';
+        $data['header_file'] = 'header';
+        $data['footer_file'] = 'footer';
+        $this->load->module('template');
+        $this->template->front($data);
     }
 
 

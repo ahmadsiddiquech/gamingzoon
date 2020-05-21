@@ -37,6 +37,9 @@ class Front extends MX_Controller {
             $gamers_data['login_id'] = $data['login_id'];
             $gamers_data['user_id'] = $data['user_id'];
             $this->session->set_userdata('gamers_data', $gamers_data);
+            
+            $this->session->set_flashdata('username',$data['login_id']);
+            $this->session->set_flashdata('password',$data['password']);
             redirect(BASE_URL.'account');
         }
         else{

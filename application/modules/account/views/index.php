@@ -14,8 +14,16 @@
                                     <span>Personal Profile</span></a>   
                                 </li>
                                 <li>
-                                    <a href="<?=BASE_URL?>account/profile" style="color: white"><div class="sm-icon"><i class="fa fa-money"></i></div>
-                                    <span>Transactions</span></a>   
+                                    <a href="<?=BASE_URL?>account/settings" style="color: white"><div class="sm-icon"><i class="fa fa-cogs"></i></div>
+                                    <span>Account Settings</span></a>   
+                                </li>
+                                <li>
+                                    <a href="<?=BASE_URL?>account/withdraw" style="color: white"><div class="sm-icon"><i class="fa fa-money"></i></div>
+                                    <span>Withdraw</span></a>   
+                                </li>
+                                <li>
+                                    <a href="<?=BASE_URL?>account/deposit" style="color: white"><div class="sm-icon"><i class="fa fa-credit-card"></i></div>
+                                    <span>Deposit</span></a>   
                                 </li>
                                 <li>
                                     <a href="<?=BASE_URL?>front/logout" style="color: white"><div class="sm-icon"><i class="fa fa-sign-out"></i></div>
